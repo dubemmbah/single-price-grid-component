@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@100;200;300;400;500;600;700&display=swap");
+
+:root {
+  /* PRIMARY */
+  --bright-yellow: hsl(71, 73%, 43%);
+  --cyan: hsl(179, 62%, 43%);
+
+  /* NEUTRAL */
+  --light-gray: hsl(204, 43%, 93%);
+  --grayish-blue: hsl(218, 22%, 67%);
+  --black: hsl(0, 0%, 8%);
+  --white: hsl(0, 0%, 100%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--light-gray);
+  font-size: 1.6rem;
+  font-family: "Karla", sans-serif;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 7.5rem 2.5rem;
+}
+
+.container {
+  max-width: 63.5rem;
+  width: 100%;
+  border-radius: 1rem;
+  background-color: var(--white);
+  display: flex;
+  flex-flow: column;
+  overflow: hidden;
+  box-shadow: 0 0 30px 20px hsl(179, 62%, 43%, 0.05);
+}
+
+.top {
+  padding: 4rem;
+}
+
+.top h1 {
+  font-size: 2.3rem;
+  letter-spacing: 0.25px;
+  color: var(--cyan);
+  margin-bottom: 2.5rem;
+}
+
+.top .intro-message {
+  font-size: 1.825rem;
+  color: var(--bright-yellow);
+  margin-bottom: 1rem;
+  text-shadow: 0.5px 0.5px 5px hsl(71, 73%, 43%, 0.1);
+}
+
+.top .info-message {
+  font-size: 1.6rem;
+  color: var(--grayish-blue);
+  line-height: 1.7;
+  font-weight: 300;
+}
+
+.bottom {
+  display: flex;
+  color: var(--white);
+}
+
+.bottom > * {
+  flex: 50%;
+}
+
+.bottom .first {
+  background-color: var(--cyan);
+  padding: 4rem;
+}
+
+.bottom .first h2,
+.bottom .second h3 {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.bottom .first p:first-of-type {
+  font-size: 3.2rem;
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.bottom .first p:first-of-type span {
+  font-size: 1.5rem;
+  opacity: 0.5;
+}
+
+.bottom .first p:last-of-type {
+  margin-bottom: 3rem;
+}
+
+.bottom .first button {
+  width: 100%;
+  padding: 1.5rem;
+  background: none;
+  border: none;
+  background-color: hsl(71, 73%, 50%);
+  border-radius: 0.75rem;
+  color: hsl(0, 0%, 100%, 0.9);
+  font-size: 1.55rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.bottom .first button:hover {
+  background-color: var(--bright-yellow);
+}
+
+.bottom .second {
+  background-color: hsl(179, 62%, 43%, 0.75);
+  padding: 4rem;
+}
+
+.bottom .second ul {
+  margin-top: 2rem;
+  list-style: none;
+}
+
+.bottom .second ul li {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  opacity: 0.6;
+}
+
+@media (max-width: 43.75em) {
+  .bottom {
+    flex-direction: column;
+  }
+
+  .top,
+  .bottom .first,
+  .bottom .second {
+    padding: 2.75rem;
+  }
+
+  .top .info-message {
+    font-size: 1.45rem;
+  }
+}
